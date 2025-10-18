@@ -7,23 +7,23 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkDeviceManualImports
 {
-    public delegate* unmanaged<VkDevice, VkMemoryGetWin32HandleInfoKHR*, void**, VkResult> vkGetMemoryWin32HandleKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkMemoryGetWin32HandleInfoKHR*, void**, VkResult> vkGetMemoryWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkExternalMemoryHandleTypeFlags, void*, VkMemoryWin32HandlePropertiesKHR*, VkResult> vkGetMemoryWin32HandlePropertiesKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkExternalMemoryHandleTypeFlags, void*, VkMemoryWin32HandlePropertiesKHR*, VkResult> vkGetMemoryWin32HandlePropertiesKHR;
 
-    public delegate* unmanaged<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult> vkImportSemaphoreWin32HandleKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkImportSemaphoreWin32HandleInfoKHR*, VkResult> vkImportSemaphoreWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, void**, VkResult> vkGetSemaphoreWin32HandleKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkSemaphoreGetWin32HandleInfoKHR*, void**, VkResult> vkGetSemaphoreWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult> vkImportFenceWin32HandleKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkImportFenceWin32HandleInfoKHR*, VkResult> vkImportFenceWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkFenceGetWin32HandleInfoKHR*, void**, VkResult> vkGetFenceWin32HandleKHR;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkFenceGetWin32HandleInfoKHR*, void**, VkResult> vkGetFenceWin32HandleKHR;
 
-    public delegate* unmanaged<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, void**, VkResult> vkGetMemoryWin32HandleNV;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkDeviceMemory, VkExternalMemoryHandleTypeFlagsNV, void**, VkResult> vkGetMemoryWin32HandleNV;
 
-    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkResult> vkAcquireFullScreenExclusiveModeEXT;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkSwapchainKHR, VkResult> vkAcquireFullScreenExclusiveModeEXT;
 
-    public delegate* unmanaged<VkDevice, VkSwapchainKHR, VkResult> vkReleaseFullScreenExclusiveModeEXT;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkSwapchainKHR, VkResult> vkReleaseFullScreenExclusiveModeEXT;
 
-    public delegate* unmanaged<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult> vkGetDeviceGroupSurfacePresentModes2EXT;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkPhysicalDeviceSurfaceInfo2KHR*, VkDeviceGroupPresentModeFlagsKHR*, VkResult> vkGetDeviceGroupSurfacePresentModes2EXT;
 }

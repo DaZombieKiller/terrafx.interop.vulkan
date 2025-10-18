@@ -23,5 +23,5 @@ public unsafe partial struct VkImportFenceWin32HandleInfoKHR
     public void* handle;
 
     [NativeTypeName("LPCWSTR")]
-    public char* name;
+    public ushort* name;
 }

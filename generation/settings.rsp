@@ -16,11 +16,8 @@ exclude-com-proxies
 exclude-empty-records
 exclude-enum-operators
 generate-aggressive-inlining
-generate-callconv-member-function
 generate-cpp-attributes
-generate-disable-runtime-marshalling
 generate-file-scoped-namespaces
-generate-guid-member
 generate-macro-bindings
 generate-marker-interfaces
 generate-native-inheritance-attribute
@@ -41,6 +38,6 @@ C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/shared
 C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um
 C:/VulkanSDK/1.3.268.0/Include
 --with-callconv
-*=Winapi
+*=Stdcall
 --with-librarypath
 *=vulkan

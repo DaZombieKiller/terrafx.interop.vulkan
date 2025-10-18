@@ -15,11 +15,11 @@ public unsafe partial struct VkNegotiateLayerInterface
     public uint loaderLayerInterfaceVersion;
 
     [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnGetInstanceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnGetInstanceProcAddr;
 
     [NativeTypeName("PFN_vkGetDeviceProcAddr")]
-    public delegate* unmanaged<VkDevice, sbyte*, delegate* unmanaged<void>> pfnGetDeviceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkDevice, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnGetDeviceProcAddr;
 
     [NativeTypeName("PFN_GetPhysicalDeviceProcAddr")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnGetPhysicalDeviceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnGetPhysicalDeviceProcAddr;
 }

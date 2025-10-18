@@ -11,8 +11,8 @@ public unsafe partial struct VkLayerInstanceLink
     public VkLayerInstanceLink* pNext;
 
     [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnNextGetInstanceProcAddr;
 
     [NativeTypeName("PFN_GetPhysicalDeviceProcAddr")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnNextGetPhysicalDeviceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnNextGetPhysicalDeviceProcAddr;
 }

@@ -19,7 +19,7 @@ public unsafe partial struct VkDebugUtilsMessengerCreateInfoEXT
     public VkDebugUtilsMessageTypeFlagsEXT messageType;
 
     [NativeTypeName("PFN_vkDebugUtilsMessengerCallbackEXT")]
-    public delegate* unmanaged<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
+    public delegate* unmanaged[Stdcall]<VkDebugUtilsMessageSeverityFlagsEXT, VkDebugUtilsMessageTypeFlagsEXT, VkDebugUtilsMessengerCallbackDataEXT*, void*, uint> pfnUserCallback;
 
     public void* pUserData;
 }

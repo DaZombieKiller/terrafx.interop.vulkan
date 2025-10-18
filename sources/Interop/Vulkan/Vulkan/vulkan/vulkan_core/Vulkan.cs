@@ -10,542 +10,542 @@ namespace TerraFX.Interop.Vulkan;
 
 public static unsafe partial class Vulkan
 {
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateInstance([NativeTypeName("const VkInstanceCreateInfo *")] VkInstanceCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkInstance* pInstance);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyInstance(VkInstance instance, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumeratePhysicalDevices(VkInstance instance, [NativeTypeName("uint32_t *")] uint* pPhysicalDeviceCount, VkPhysicalDevice* pPhysicalDevices);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceFeatures(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures* pFeatures);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties* pFormatProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, VkImageTiling tiling, VkImageUsageFlags usage, VkImageCreateFlags flags, VkImageFormatProperties* pImageFormatProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceQueueFamilyProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pQueueFamilyPropertyCount, VkQueueFamilyProperties* pQueueFamilyProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceMemoryProperties(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties* pMemoryProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("PFN_vkVoidFunction")]
-    public static extern delegate* unmanaged<void> vkGetInstanceProcAddr(VkInstance instance, [NativeTypeName("const char *")] sbyte* pName);
+    public static extern delegate* unmanaged[Stdcall]<void> vkGetInstanceProcAddr(VkInstance instance, [NativeTypeName("const char *")] sbyte* pName);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("PFN_vkVoidFunction")]
-    public static extern delegate* unmanaged<void> vkGetDeviceProcAddr(VkDevice device, [NativeTypeName("const char *")] sbyte* pName);
+    public static extern delegate* unmanaged[Stdcall]<void> vkGetDeviceProcAddr(VkDevice device, [NativeTypeName("const char *")] sbyte* pName);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDevice(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkDeviceCreateInfo *")] VkDeviceCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDevice* pDevice);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyDevice(VkDevice device, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumerateInstanceExtensionProperties([NativeTypeName("const char *")] sbyte* pLayerName, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkExtensionProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumerateDeviceExtensionProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("const char *")] sbyte* pLayerName, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkExtensionProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumerateInstanceLayerProperties([NativeTypeName("uint32_t *")] uint* pPropertyCount, VkLayerProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumerateDeviceLayerProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkLayerProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceQueue(VkDevice device, [NativeTypeName("uint32_t")] uint queueFamilyIndex, [NativeTypeName("uint32_t")] uint queueIndex, VkQueue* pQueue);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkQueueSubmit(VkQueue queue, [NativeTypeName("uint32_t")] uint submitCount, [NativeTypeName("const VkSubmitInfo *")] VkSubmitInfo* pSubmits, VkFence fence);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkQueueWaitIdle(VkQueue queue);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkDeviceWaitIdle(VkDevice device);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkAllocateMemory(VkDevice device, [NativeTypeName("const VkMemoryAllocateInfo *")] VkMemoryAllocateInfo* pAllocateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDeviceMemory* pMemory);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkFreeMemory(VkDevice device, VkDeviceMemory memory, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkMapMemory(VkDevice device, VkDeviceMemory memory, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("VkDeviceSize")] ulong size, VkMemoryMapFlags flags, void** ppData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkUnmapMemory(VkDevice device, VkDeviceMemory memory);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkFlushMappedMemoryRanges(VkDevice device, [NativeTypeName("uint32_t")] uint memoryRangeCount, [NativeTypeName("const VkMappedMemoryRange *")] VkMappedMemoryRange* pMemoryRanges);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkInvalidateMappedMemoryRanges(VkDevice device, [NativeTypeName("uint32_t")] uint memoryRangeCount, [NativeTypeName("const VkMappedMemoryRange *")] VkMappedMemoryRange* pMemoryRanges);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceMemoryCommitment(VkDevice device, VkDeviceMemory memory, [NativeTypeName("VkDeviceSize *")] ulong* pCommittedMemoryInBytes);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBindBufferMemory(VkDevice device, VkBuffer buffer, VkDeviceMemory memory, [NativeTypeName("VkDeviceSize")] ulong memoryOffset);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBindImageMemory(VkDevice device, VkImage image, VkDeviceMemory memory, [NativeTypeName("VkDeviceSize")] ulong memoryOffset);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetBufferMemoryRequirements(VkDevice device, VkBuffer buffer, VkMemoryRequirements* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageMemoryRequirements(VkDevice device, VkImage image, VkMemoryRequirements* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageSparseMemoryRequirements(VkDevice device, VkImage image, [NativeTypeName("uint32_t *")] uint* pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements* pSparseMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceSparseImageFormatProperties(VkPhysicalDevice physicalDevice, VkFormat format, VkImageType type, [NativeTypeName("VkSampleCountFlagBits")] VkSampleCountFlags samples, VkImageUsageFlags usage, VkImageTiling tiling, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkSparseImageFormatProperties* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkQueueBindSparse(VkQueue queue, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindSparseInfo *")] VkBindSparseInfo* pBindInfo, VkFence fence);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateFence(VkDevice device, [NativeTypeName("const VkFenceCreateInfo *")] VkFenceCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkFence* pFence);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyFence(VkDevice device, VkFence fence, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkResetFences(VkDevice device, [NativeTypeName("uint32_t")] uint fenceCount, [NativeTypeName("const VkFence *")] VkFence* pFences);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetFenceStatus(VkDevice device, VkFence fence);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkWaitForFences(VkDevice device, [NativeTypeName("uint32_t")] uint fenceCount, [NativeTypeName("const VkFence *")] VkFence* pFences, [NativeTypeName("VkBool32")] uint waitAll, [NativeTypeName("uint64_t")] ulong timeout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateSemaphore(VkDevice device, [NativeTypeName("const VkSemaphoreCreateInfo *")] VkSemaphoreCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSemaphore* pSemaphore);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroySemaphore(VkDevice device, VkSemaphore semaphore, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateEvent(VkDevice device, [NativeTypeName("const VkEventCreateInfo *")] VkEventCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkEvent* pEvent);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyEvent(VkDevice device, VkEvent @event, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetEventStatus(VkDevice device, VkEvent @event);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkSetEvent(VkDevice device, VkEvent @event);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkResetEvent(VkDevice device, VkEvent @event);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateQueryPool(VkDevice device, [NativeTypeName("const VkQueryPoolCreateInfo *")] VkQueryPoolCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkQueryPool* pQueryPool);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyQueryPool(VkDevice device, VkQueryPool queryPool, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetQueryPoolResults(VkDevice device, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount, [NativeTypeName("size_t")] nuint dataSize, void* pData, [NativeTypeName("VkDeviceSize")] ulong stride, VkQueryResultFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateBuffer(VkDevice device, [NativeTypeName("const VkBufferCreateInfo *")] VkBufferCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkBuffer* pBuffer);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyBuffer(VkDevice device, VkBuffer buffer, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateBufferView(VkDevice device, [NativeTypeName("const VkBufferViewCreateInfo *")] VkBufferViewCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkBufferView* pView);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyBufferView(VkDevice device, VkBufferView bufferView, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateImage(VkDevice device, [NativeTypeName("const VkImageCreateInfo *")] VkImageCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkImage* pImage);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyImage(VkDevice device, VkImage image, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageSubresourceLayout(VkDevice device, VkImage image, [NativeTypeName("const VkImageSubresource *")] VkImageSubresource* pSubresource, VkSubresourceLayout* pLayout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateImageView(VkDevice device, [NativeTypeName("const VkImageViewCreateInfo *")] VkImageViewCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkImageView* pView);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyImageView(VkDevice device, VkImageView imageView, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateShaderModule(VkDevice device, [NativeTypeName("const VkShaderModuleCreateInfo *")] VkShaderModuleCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkShaderModule* pShaderModule);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyShaderModule(VkDevice device, VkShaderModule shaderModule, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreatePipelineCache(VkDevice device, [NativeTypeName("const VkPipelineCacheCreateInfo *")] VkPipelineCacheCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipelineCache* pPipelineCache);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyPipelineCache(VkDevice device, VkPipelineCache pipelineCache, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPipelineCacheData(VkDevice device, VkPipelineCache pipelineCache, [NativeTypeName("size_t *")] nuint* pDataSize, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkMergePipelineCaches(VkDevice device, VkPipelineCache dstCache, [NativeTypeName("uint32_t")] uint srcCacheCount, [NativeTypeName("const VkPipelineCache *")] VkPipelineCache* pSrcCaches);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateGraphicsPipelines(VkDevice device, VkPipelineCache pipelineCache, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkGraphicsPipelineCreateInfo *")] VkGraphicsPipelineCreateInfo* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipeline* pPipelines);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateComputePipelines(VkDevice device, VkPipelineCache pipelineCache, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkComputePipelineCreateInfo *")] VkComputePipelineCreateInfo* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipeline* pPipelines);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyPipeline(VkDevice device, VkPipeline pipeline, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreatePipelineLayout(VkDevice device, [NativeTypeName("const VkPipelineLayoutCreateInfo *")] VkPipelineLayoutCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPipelineLayout* pPipelineLayout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyPipelineLayout(VkDevice device, VkPipelineLayout pipelineLayout, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateSampler(VkDevice device, [NativeTypeName("const VkSamplerCreateInfo *")] VkSamplerCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSampler* pSampler);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroySampler(VkDevice device, VkSampler sampler, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDescriptorSetLayout(VkDevice device, [NativeTypeName("const VkDescriptorSetLayoutCreateInfo *")] VkDescriptorSetLayoutCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDescriptorSetLayout* pSetLayout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyDescriptorSetLayout(VkDevice device, VkDescriptorSetLayout descriptorSetLayout, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDescriptorPool(VkDevice device, [NativeTypeName("const VkDescriptorPoolCreateInfo *")] VkDescriptorPoolCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDescriptorPool* pDescriptorPool);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyDescriptorPool(VkDevice device, VkDescriptorPool descriptorPool, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkResetDescriptorPool(VkDevice device, VkDescriptorPool descriptorPool, VkDescriptorPoolResetFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkAllocateDescriptorSets(VkDevice device, [NativeTypeName("const VkDescriptorSetAllocateInfo *")] VkDescriptorSetAllocateInfo* pAllocateInfo, VkDescriptorSet* pDescriptorSets);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkFreeDescriptorSets(VkDevice device, VkDescriptorPool descriptorPool, [NativeTypeName("uint32_t")] uint descriptorSetCount, [NativeTypeName("const VkDescriptorSet *")] VkDescriptorSet* pDescriptorSets);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkUpdateDescriptorSets(VkDevice device, [NativeTypeName("uint32_t")] uint descriptorWriteCount, [NativeTypeName("const VkWriteDescriptorSet *")] VkWriteDescriptorSet* pDescriptorWrites, [NativeTypeName("uint32_t")] uint descriptorCopyCount, [NativeTypeName("const VkCopyDescriptorSet *")] VkCopyDescriptorSet* pDescriptorCopies);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateFramebuffer(VkDevice device, [NativeTypeName("const VkFramebufferCreateInfo *")] VkFramebufferCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkFramebuffer* pFramebuffer);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyFramebuffer(VkDevice device, VkFramebuffer framebuffer, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateRenderPass(VkDevice device, [NativeTypeName("const VkRenderPassCreateInfo *")] VkRenderPassCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkRenderPass* pRenderPass);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyRenderPass(VkDevice device, VkRenderPass renderPass, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetRenderAreaGranularity(VkDevice device, VkRenderPass renderPass, VkExtent2D* pGranularity);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateCommandPool(VkDevice device, [NativeTypeName("const VkCommandPoolCreateInfo *")] VkCommandPoolCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkCommandPool* pCommandPool);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyCommandPool(VkDevice device, VkCommandPool commandPool, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkResetCommandPool(VkDevice device, VkCommandPool commandPool, VkCommandPoolResetFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkAllocateCommandBuffers(VkDevice device, [NativeTypeName("const VkCommandBufferAllocateInfo *")] VkCommandBufferAllocateInfo* pAllocateInfo, VkCommandBuffer* pCommandBuffers);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkFreeCommandBuffers(VkDevice device, VkCommandPool commandPool, [NativeTypeName("uint32_t")] uint commandBufferCount, [NativeTypeName("const VkCommandBuffer *")] VkCommandBuffer* pCommandBuffers);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBeginCommandBuffer(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCommandBufferBeginInfo *")] VkCommandBufferBeginInfo* pBeginInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEndCommandBuffer(VkCommandBuffer commandBuffer);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkResetCommandBuffer(VkCommandBuffer commandBuffer, VkCommandBufferResetFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindPipeline(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipeline pipeline);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetViewport(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstViewport, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewport *")] VkViewport* pViewports);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetScissor(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstScissor, [NativeTypeName("uint32_t")] uint scissorCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pScissors);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetLineWidth(VkCommandBuffer commandBuffer, float lineWidth);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthBias(VkCommandBuffer commandBuffer, float depthBiasConstantFactor, float depthBiasClamp, float depthBiasSlopeFactor);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetBlendConstants(VkCommandBuffer commandBuffer, [NativeTypeName("const float[4]")] float* blendConstants);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthBounds(VkCommandBuffer commandBuffer, float minDepthBounds, float maxDepthBounds);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetStencilCompareMask(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, [NativeTypeName("uint32_t")] uint compareMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetStencilWriteMask(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, [NativeTypeName("uint32_t")] uint writeMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetStencilReference(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, [NativeTypeName("uint32_t")] uint reference);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindDescriptorSets(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, [NativeTypeName("uint32_t")] uint firstSet, [NativeTypeName("uint32_t")] uint descriptorSetCount, [NativeTypeName("const VkDescriptorSet *")] VkDescriptorSet* pDescriptorSets, [NativeTypeName("uint32_t")] uint dynamicOffsetCount, [NativeTypeName("const uint32_t *")] uint* pDynamicOffsets);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindIndexBuffer(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkIndexType indexType);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindVertexBuffers(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDraw(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint vertexCount, [NativeTypeName("uint32_t")] uint instanceCount, [NativeTypeName("uint32_t")] uint firstVertex, [NativeTypeName("uint32_t")] uint firstInstance);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawIndexed(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint indexCount, [NativeTypeName("uint32_t")] uint instanceCount, [NativeTypeName("uint32_t")] uint firstIndex, [NativeTypeName("int32_t")] int vertexOffset, [NativeTypeName("uint32_t")] uint firstInstance);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawIndexedIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDispatch(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDispatchIndirect(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyBuffer(VkCommandBuffer commandBuffer, VkBuffer srcBuffer, VkBuffer dstBuffer, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkBufferCopy *")] VkBufferCopy* pRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkImageCopy *")] VkImageCopy* pRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBlitImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkImageBlit *")] VkImageBlit* pRegions, VkFilter filter);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyBufferToImage(VkCommandBuffer commandBuffer, VkBuffer srcBuffer, VkImage dstImage, VkImageLayout dstImageLayout, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkBufferImageCopy *")] VkBufferImageCopy* pRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyImageToBuffer(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkBuffer dstBuffer, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkBufferImageCopy *")] VkBufferImageCopy* pRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdUpdateBuffer(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("VkDeviceSize")] ulong dataSize, [NativeTypeName("const void *")] void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdFillBuffer(VkCommandBuffer commandBuffer, VkBuffer dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("VkDeviceSize")] ulong size, [NativeTypeName("uint32_t")] uint data);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdClearColorImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout imageLayout, [NativeTypeName("const VkClearColorValue *")] VkClearColorValue* pColor, [NativeTypeName("uint32_t")] uint rangeCount, [NativeTypeName("const VkImageSubresourceRange *")] VkImageSubresourceRange* pRanges);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdClearDepthStencilImage(VkCommandBuffer commandBuffer, VkImage image, VkImageLayout imageLayout, [NativeTypeName("const VkClearDepthStencilValue *")] VkClearDepthStencilValue* pDepthStencil, [NativeTypeName("uint32_t")] uint rangeCount, [NativeTypeName("const VkImageSubresourceRange *")] VkImageSubresourceRange* pRanges);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdClearAttachments(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkClearAttachment *")] VkClearAttachment* pAttachments, [NativeTypeName("uint32_t")] uint rectCount, [NativeTypeName("const VkClearRect *")] VkClearRect* pRects);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdResolveImage(VkCommandBuffer commandBuffer, VkImage srcImage, VkImageLayout srcImageLayout, VkImage dstImage, VkImageLayout dstImageLayout, [NativeTypeName("uint32_t")] uint regionCount, [NativeTypeName("const VkImageResolve *")] VkImageResolve* pRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetEvent(VkCommandBuffer commandBuffer, VkEvent @event, VkPipelineStageFlags stageMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdResetEvent(VkCommandBuffer commandBuffer, VkEvent @event, VkPipelineStageFlags stageMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdWaitEvents(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint eventCount, [NativeTypeName("const VkEvent *")] VkEvent* pEvents, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, [NativeTypeName("uint32_t")] uint memoryBarrierCount, [NativeTypeName("const VkMemoryBarrier *")] VkMemoryBarrier* pMemoryBarriers, [NativeTypeName("uint32_t")] uint bufferMemoryBarrierCount, [NativeTypeName("const VkBufferMemoryBarrier *")] VkBufferMemoryBarrier* pBufferMemoryBarriers, [NativeTypeName("uint32_t")] uint imageMemoryBarrierCount, [NativeTypeName("const VkImageMemoryBarrier *")] VkImageMemoryBarrier* pImageMemoryBarriers);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdPipelineBarrier(VkCommandBuffer commandBuffer, VkPipelineStageFlags srcStageMask, VkPipelineStageFlags dstStageMask, VkDependencyFlags dependencyFlags, [NativeTypeName("uint32_t")] uint memoryBarrierCount, [NativeTypeName("const VkMemoryBarrier *")] VkMemoryBarrier* pMemoryBarriers, [NativeTypeName("uint32_t")] uint bufferMemoryBarrierCount, [NativeTypeName("const VkBufferMemoryBarrier *")] VkBufferMemoryBarrier* pBufferMemoryBarriers, [NativeTypeName("uint32_t")] uint imageMemoryBarrierCount, [NativeTypeName("const VkImageMemoryBarrier *")] VkImageMemoryBarrier* pImageMemoryBarriers);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBeginQuery(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query, VkQueryControlFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdEndQuery(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdResetQueryPool(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdWriteTimestamp(VkCommandBuffer commandBuffer, [NativeTypeName("VkPipelineStageFlagBits")] VkPipelineStageFlags pipelineStage, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyQueryPoolResults(VkCommandBuffer commandBuffer, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount, VkBuffer dstBuffer, [NativeTypeName("VkDeviceSize")] ulong dstOffset, [NativeTypeName("VkDeviceSize")] ulong stride, VkQueryResultFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdPushConstants(VkCommandBuffer commandBuffer, VkPipelineLayout layout, VkShaderStageFlags stageFlags, [NativeTypeName("uint32_t")] uint offset, [NativeTypeName("uint32_t")] uint size, [NativeTypeName("const void *")] void* pValues);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBeginRenderPass(VkCommandBuffer commandBuffer, [NativeTypeName("const VkRenderPassBeginInfo *")] VkRenderPassBeginInfo* pRenderPassBegin, VkSubpassContents contents);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdNextSubpass(VkCommandBuffer commandBuffer, VkSubpassContents contents);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdEndRenderPass(VkCommandBuffer commandBuffer);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdExecuteCommands(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint commandBufferCount, [NativeTypeName("const VkCommandBuffer *")] VkCommandBuffer* pCommandBuffers);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumerateInstanceVersion([NativeTypeName("uint32_t *")] uint* pApiVersion);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBindBufferMemory2(VkDevice device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindBufferMemoryInfo *")] VkBindBufferMemoryInfo* pBindInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBindImageMemory2(VkDevice device, [NativeTypeName("uint32_t")] uint bindInfoCount, [NativeTypeName("const VkBindImageMemoryInfo *")] VkBindImageMemoryInfo* pBindInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceGroupPeerMemoryFeatures(VkDevice device, [NativeTypeName("uint32_t")] uint heapIndex, [NativeTypeName("uint32_t")] uint localDeviceIndex, [NativeTypeName("uint32_t")] uint remoteDeviceIndex, VkPeerMemoryFeatureFlags* pPeerMemoryFeatures);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDeviceMask(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint deviceMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDispatchBase(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint baseGroupX, [NativeTypeName("uint32_t")] uint baseGroupY, [NativeTypeName("uint32_t")] uint baseGroupZ, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkEnumeratePhysicalDeviceGroups(VkInstance instance, [NativeTypeName("uint32_t *")] uint* pPhysicalDeviceGroupCount, VkPhysicalDeviceGroupProperties* pPhysicalDeviceGroupProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageMemoryRequirements2(VkDevice device, [NativeTypeName("const VkImageMemoryRequirementsInfo2 *")] VkImageMemoryRequirementsInfo2* pInfo, VkMemoryRequirements2* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetBufferMemoryRequirements2(VkDevice device, [NativeTypeName("const VkBufferMemoryRequirementsInfo2 *")] VkBufferMemoryRequirementsInfo2* pInfo, VkMemoryRequirements2* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageSparseMemoryRequirements2(VkDevice device, [NativeTypeName("const VkImageSparseMemoryRequirementsInfo2 *")] VkImageSparseMemoryRequirementsInfo2* pInfo, [NativeTypeName("uint32_t *")] uint* pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements2* pSparseMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceFeatures2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceFeatures2* pFeatures);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceProperties2* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceFormatProperties2(VkPhysicalDevice physicalDevice, VkFormat format, VkFormatProperties2* pFormatProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceImageFormatProperties2(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceImageFormatInfo2 *")] VkPhysicalDeviceImageFormatInfo2* pImageFormatInfo, VkImageFormatProperties2* pImageFormatProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceQueueFamilyProperties2(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pQueueFamilyPropertyCount, VkQueueFamilyProperties2* pQueueFamilyProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceMemoryProperties2(VkPhysicalDevice physicalDevice, VkPhysicalDeviceMemoryProperties2* pMemoryProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceSparseImageFormatProperties2(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceSparseImageFormatInfo2 *")] VkPhysicalDeviceSparseImageFormatInfo2* pFormatInfo, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkSparseImageFormatProperties2* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkTrimCommandPool(VkDevice device, VkCommandPool commandPool, VkCommandPoolTrimFlags flags);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceQueue2(VkDevice device, [NativeTypeName("const VkDeviceQueueInfo2 *")] VkDeviceQueueInfo2* pQueueInfo, VkQueue* pQueue);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateSamplerYcbcrConversion(VkDevice device, [NativeTypeName("const VkSamplerYcbcrConversionCreateInfo *")] VkSamplerYcbcrConversionCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSamplerYcbcrConversion* pYcbcrConversion);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroySamplerYcbcrConversion(VkDevice device, VkSamplerYcbcrConversion ycbcrConversion, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDescriptorUpdateTemplate(VkDevice device, [NativeTypeName("const VkDescriptorUpdateTemplateCreateInfo *")] VkDescriptorUpdateTemplateCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDescriptorUpdateTemplate* pDescriptorUpdateTemplate);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyDescriptorUpdateTemplate(VkDevice device, VkDescriptorUpdateTemplate descriptorUpdateTemplate, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkUpdateDescriptorSetWithTemplate(VkDevice device, VkDescriptorSet descriptorSet, VkDescriptorUpdateTemplate descriptorUpdateTemplate, [NativeTypeName("const void *")] void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceExternalBufferProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalBufferInfo *")] VkPhysicalDeviceExternalBufferInfo* pExternalBufferInfo, VkExternalBufferProperties* pExternalBufferProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceExternalFenceProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalFenceInfo *")] VkPhysicalDeviceExternalFenceInfo* pExternalFenceInfo, VkExternalFenceProperties* pExternalFenceProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPhysicalDeviceExternalSemaphoreProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkPhysicalDeviceExternalSemaphoreInfo *")] VkPhysicalDeviceExternalSemaphoreInfo* pExternalSemaphoreInfo, VkExternalSemaphoreProperties* pExternalSemaphoreProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDescriptorSetLayoutSupport(VkDevice device, [NativeTypeName("const VkDescriptorSetLayoutCreateInfo *")] VkDescriptorSetLayoutCreateInfo* pCreateInfo, VkDescriptorSetLayoutSupport* pSupport);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawIndirectCount(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawIndexedIndirectCount(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateRenderPass2(VkDevice device, [NativeTypeName("const VkRenderPassCreateInfo2 *")] VkRenderPassCreateInfo2* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkRenderPass* pRenderPass);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBeginRenderPass2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkRenderPassBeginInfo *")] VkRenderPassBeginInfo* pRenderPassBegin, [NativeTypeName("const VkSubpassBeginInfo *")] VkSubpassBeginInfo* pSubpassBeginInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdNextSubpass2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkSubpassBeginInfo *")] VkSubpassBeginInfo* pSubpassBeginInfo, [NativeTypeName("const VkSubpassEndInfo *")] VkSubpassEndInfo* pSubpassEndInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdEndRenderPass2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkSubpassEndInfo *")] VkSubpassEndInfo* pSubpassEndInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkResetQueryPool(VkDevice device, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery, [NativeTypeName("uint32_t")] uint queryCount);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetSemaphoreCounterValue(VkDevice device, VkSemaphore semaphore, [NativeTypeName("uint64_t *")] ulong* pValue);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkWaitSemaphores(VkDevice device, [NativeTypeName("const VkSemaphoreWaitInfo *")] VkSemaphoreWaitInfo* pWaitInfo, [NativeTypeName("uint64_t")] ulong timeout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkSignalSemaphore(VkDevice device, [NativeTypeName("const VkSemaphoreSignalInfo *")] VkSemaphoreSignalInfo* pSignalInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("VkDeviceAddress")]
     public static extern ulong vkGetBufferDeviceAddress(VkDevice device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("uint64_t")]
     public static extern ulong vkGetBufferOpaqueCaptureAddress(VkDevice device, [NativeTypeName("const VkBufferDeviceAddressInfo *")] VkBufferDeviceAddressInfo* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("uint64_t")]
     public static extern ulong vkGetDeviceMemoryOpaqueCaptureAddress(VkDevice device, [NativeTypeName("const VkDeviceMemoryOpaqueCaptureAddressInfo *")] VkDeviceMemoryOpaqueCaptureAddressInfo* pInfo);
 
@@ -594,199 +594,199 @@ public static unsafe partial class Vulkan
     [NativeTypeName("const VkFormatFeatureFlagBits2")]
     public const ulong VK_FORMAT_FEATURE_2_OPTICAL_FLOW_COST_BIT_NV = 0x40000000000UL;
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceToolProperties(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pToolCount, VkPhysicalDeviceToolProperties* pToolProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreatePrivateDataSlot(VkDevice device, [NativeTypeName("const VkPrivateDataSlotCreateInfo *")] VkPrivateDataSlotCreateInfo* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkPrivateDataSlot* pPrivateDataSlot);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyPrivateDataSlot(VkDevice device, VkPrivateDataSlot privateDataSlot, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkSetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlot privateDataSlot, [NativeTypeName("uint64_t")] ulong data);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPrivateData(VkDevice device, VkObjectType objectType, [NativeTypeName("uint64_t")] ulong objectHandle, VkPrivateDataSlot privateDataSlot, [NativeTypeName("uint64_t *")] ulong* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetEvent2(VkCommandBuffer commandBuffer, VkEvent @event, [NativeTypeName("const VkDependencyInfo *")] VkDependencyInfo* pDependencyInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdResetEvent2(VkCommandBuffer commandBuffer, VkEvent @event, VkPipelineStageFlags2 stageMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdWaitEvents2(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint eventCount, [NativeTypeName("const VkEvent *")] VkEvent* pEvents, [NativeTypeName("const VkDependencyInfo *")] VkDependencyInfo* pDependencyInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdPipelineBarrier2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDependencyInfo *")] VkDependencyInfo* pDependencyInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdWriteTimestamp2(VkCommandBuffer commandBuffer, VkPipelineStageFlags2 stage, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint query);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkQueueSubmit2(VkQueue queue, [NativeTypeName("uint32_t")] uint submitCount, [NativeTypeName("const VkSubmitInfo2 *")] VkSubmitInfo2* pSubmits, VkFence fence);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyBuffer2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyBufferInfo2 *")] VkCopyBufferInfo2* pCopyBufferInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyImage2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyImageInfo2 *")] VkCopyImageInfo2* pCopyImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyBufferToImage2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyBufferToImageInfo2 *")] VkCopyBufferToImageInfo2* pCopyBufferToImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyImageToBuffer2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyImageToBufferInfo2 *")] VkCopyImageToBufferInfo2* pCopyImageToBufferInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBlitImage2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkBlitImageInfo2 *")] VkBlitImageInfo2* pBlitImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdResolveImage2(VkCommandBuffer commandBuffer, [NativeTypeName("const VkResolveImageInfo2 *")] VkResolveImageInfo2* pResolveImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBeginRendering(VkCommandBuffer commandBuffer, [NativeTypeName("const VkRenderingInfo *")] VkRenderingInfo* pRenderingInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdEndRendering(VkCommandBuffer commandBuffer);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCullMode(VkCommandBuffer commandBuffer, VkCullModeFlags cullMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetFrontFace(VkCommandBuffer commandBuffer, VkFrontFace frontFace);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetPrimitiveTopology(VkCommandBuffer commandBuffer, VkPrimitiveTopology primitiveTopology);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetViewportWithCount(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewport *")] VkViewport* pViewports);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetScissorWithCount(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint scissorCount, [NativeTypeName("const VkRect2D *")] VkRect2D* pScissors);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindVertexBuffers2(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstBinding, [NativeTypeName("uint32_t")] uint bindingCount, [NativeTypeName("const VkBuffer *")] VkBuffer* pBuffers, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets, [NativeTypeName("const VkDeviceSize *")] ulong* pSizes, [NativeTypeName("const VkDeviceSize *")] ulong* pStrides);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthTestEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthWriteEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthWriteEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthCompareOp(VkCommandBuffer commandBuffer, VkCompareOp depthCompareOp);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthBoundsTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthBoundsTestEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetStencilTestEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint stencilTestEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetStencilOp(VkCommandBuffer commandBuffer, VkStencilFaceFlags faceMask, VkStencilOp failOp, VkStencilOp passOp, VkStencilOp depthFailOp, VkCompareOp compareOp);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetRasterizerDiscardEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint rasterizerDiscardEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthBiasEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthBiasEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetPrimitiveRestartEnable(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint primitiveRestartEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceBufferMemoryRequirements(VkDevice device, [NativeTypeName("const VkDeviceBufferMemoryRequirements *")] VkDeviceBufferMemoryRequirements* pInfo, VkMemoryRequirements2* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceImageMemoryRequirements(VkDevice device, [NativeTypeName("const VkDeviceImageMemoryRequirements *")] VkDeviceImageMemoryRequirements* pInfo, VkMemoryRequirements2* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceImageSparseMemoryRequirements(VkDevice device, [NativeTypeName("const VkDeviceImageMemoryRequirements *")] VkDeviceImageMemoryRequirements* pInfo, [NativeTypeName("uint32_t *")] uint* pSparseMemoryRequirementCount, VkSparseImageMemoryRequirements2* pSparseMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroySurfaceKHR(VkInstance instance, VkSurfaceKHR surface, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceSurfaceSupportKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint queueFamilyIndex, VkSurfaceKHR surface, [NativeTypeName("VkBool32 *")] uint* pSupported);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceSurfaceCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, VkSurfaceCapabilitiesKHR* pSurfaceCapabilities);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceSurfaceFormatsKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, [NativeTypeName("uint32_t *")] uint* pSurfaceFormatCount, VkSurfaceFormatKHR* pSurfaceFormats);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceSurfacePresentModesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, [NativeTypeName("uint32_t *")] uint* pPresentModeCount, VkPresentModeKHR* pPresentModes);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateSwapchainKHR(VkDevice device, [NativeTypeName("const VkSwapchainCreateInfoKHR *")] VkSwapchainCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchain);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroySwapchainKHR(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetSwapchainImagesKHR(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint32_t *")] uint* pSwapchainImageCount, VkImage* pSwapchainImages);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkAcquireNextImageKHR(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint64_t")] ulong timeout, VkSemaphore semaphore, VkFence fence, [NativeTypeName("uint32_t *")] uint* pImageIndex);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkQueuePresentKHR(VkQueue queue, [NativeTypeName("const VkPresentInfoKHR *")] VkPresentInfoKHR* pPresentInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDeviceGroupPresentCapabilitiesKHR(VkDevice device, VkDeviceGroupPresentCapabilitiesKHR* pDeviceGroupPresentCapabilities);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDeviceGroupSurfacePresentModesKHR(VkDevice device, VkSurfaceKHR surface, VkDeviceGroupPresentModeFlagsKHR* pModes);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDevicePresentRectanglesKHR(VkPhysicalDevice physicalDevice, VkSurfaceKHR surface, [NativeTypeName("uint32_t *")] uint* pRectCount, VkRect2D* pRects);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkAcquireNextImage2KHR(VkDevice device, [NativeTypeName("const VkAcquireNextImageInfoKHR *")] VkAcquireNextImageInfoKHR* pAcquireInfo, [NativeTypeName("uint32_t *")] uint* pImageIndex);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceDisplayPropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayPropertiesKHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceDisplayPlanePropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayPlanePropertiesKHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDisplayPlaneSupportedDisplaysKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t")] uint planeIndex, [NativeTypeName("uint32_t *")] uint* pDisplayCount, VkDisplayKHR* pDisplays);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDisplayModePropertiesKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayModePropertiesKHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDisplayModeKHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, [NativeTypeName("const VkDisplayModeCreateInfoKHR *")] VkDisplayModeCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkDisplayModeKHR* pMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDisplayPlaneCapabilitiesKHR(VkPhysicalDevice physicalDevice, VkDisplayModeKHR mode, [NativeTypeName("uint32_t")] uint planeIndex, VkDisplayPlaneCapabilitiesKHR* pCapabilities);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateDisplayPlaneSurfaceKHR(VkInstance instance, [NativeTypeName("const VkDisplaySurfaceCreateInfoKHR *")] VkDisplaySurfaceCreateInfoKHR* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSurfaceKHR* pSurface);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateSharedSwapchainsKHR(VkDevice device, [NativeTypeName("uint32_t")] uint swapchainCount, [NativeTypeName("const VkSwapchainCreateInfoKHR *")] VkSwapchainCreateInfoKHR* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkSwapchainKHR* pSwapchains);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceDisplayProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayProperties2KHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceDisplayPlaneProperties2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayPlaneProperties2KHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDisplayModeProperties2KHR(VkPhysicalDevice physicalDevice, VkDisplayKHR display, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkDisplayModeProperties2KHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDisplayPlaneCapabilities2KHR(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkDisplayPlaneInfo2KHR *")] VkDisplayPlaneInfo2KHR* pDisplayPlaneInfo, VkDisplayPlaneCapabilities2KHR* pCapabilities);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkMapMemory2KHR(VkDevice device, [NativeTypeName("const VkMemoryMapInfoKHR *")] VkMemoryMapInfoKHR* pMemoryMapInfo, void** ppData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkUnmapMemory2KHR(VkDevice device, [NativeTypeName("const VkMemoryUnmapInfoKHR *")] VkMemoryUnmapInfoKHR* pMemoryUnmapInfo);
 
     [NativeTypeName("const VkPipelineCreateFlagBits2KHR")]
@@ -963,302 +963,302 @@ public static unsafe partial class Vulkan
     [NativeTypeName("const VkBufferUsageFlagBits2KHR")]
     public const ulong VK_BUFFER_USAGE_2_MICROMAP_STORAGE_BIT_EXT = 0x01000000UL;
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindIndexBuffer2KHR(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("VkDeviceSize")] ulong size, VkIndexType indexType);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetRenderingAreaGranularityKHR(VkDevice device, [NativeTypeName("const VkRenderingAreaInfoKHR *")] VkRenderingAreaInfoKHR* pRenderingAreaInfo, VkExtent2D* pGranularity);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceImageSubresourceLayoutKHR(VkDevice device, [NativeTypeName("const VkDeviceImageSubresourceInfoKHR *")] VkDeviceImageSubresourceInfoKHR* pInfo, VkSubresourceLayout2KHR* pLayout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetImageSubresourceLayout2KHR(VkDevice device, VkImage image, [NativeTypeName("const VkImageSubresource2KHR *")] VkImageSubresource2KHR* pSubresource, VkSubresourceLayout2KHR* pLayout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceCooperativeMatrixPropertiesKHR(VkPhysicalDevice physicalDevice, [NativeTypeName("uint32_t *")] uint* pPropertyCount, VkCooperativeMatrixPropertiesKHR* pProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDiscardRectangleEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint discardRectangleEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDiscardRectangleModeEXT(VkCommandBuffer commandBuffer, VkDiscardRectangleModeEXT discardRectangleMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetExclusiveScissorEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstExclusiveScissor, [NativeTypeName("uint32_t")] uint exclusiveScissorCount, [NativeTypeName("const VkBool32 *")] uint* pExclusiveScissorEnables);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyMemoryToImageEXT(VkDevice device, [NativeTypeName("const VkCopyMemoryToImageInfoEXT *")] VkCopyMemoryToImageInfoEXT* pCopyMemoryToImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyImageToMemoryEXT(VkDevice device, [NativeTypeName("const VkCopyImageToMemoryInfoEXT *")] VkCopyImageToMemoryInfoEXT* pCopyImageToMemoryInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyImageToImageEXT(VkDevice device, [NativeTypeName("const VkCopyImageToImageInfoEXT *")] VkCopyImageToImageInfoEXT* pCopyImageToImageInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkTransitionImageLayoutEXT(VkDevice device, [NativeTypeName("uint32_t")] uint transitionCount, [NativeTypeName("const VkHostImageLayoutTransitionInfoEXT *")] VkHostImageLayoutTransitionInfoEXT* pTransitions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkReleaseSwapchainImagesEXT(VkDevice device, [NativeTypeName("const VkReleaseSwapchainImagesInfoEXT *")] VkReleaseSwapchainImagesInfoEXT* pReleaseInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthBias2EXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkDepthBiasInfoEXT *")] VkDepthBiasInfoEXT* pDepthBiasInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDescriptorSetLayoutSizeEXT(VkDevice device, VkDescriptorSetLayout layout, [NativeTypeName("VkDeviceSize *")] ulong* pLayoutSizeInBytes);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDescriptorSetLayoutBindingOffsetEXT(VkDevice device, VkDescriptorSetLayout layout, [NativeTypeName("uint32_t")] uint binding, [NativeTypeName("VkDeviceSize *")] ulong* pOffset);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDescriptorEXT(VkDevice device, [NativeTypeName("const VkDescriptorGetInfoEXT *")] VkDescriptorGetInfoEXT* pDescriptorInfo, [NativeTypeName("size_t")] nuint dataSize, void* pDescriptor);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindDescriptorBuffersEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint bufferCount, [NativeTypeName("const VkDescriptorBufferBindingInfoEXT *")] VkDescriptorBufferBindingInfoEXT* pBindingInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDescriptorBufferOffsetsEXT(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, [NativeTypeName("uint32_t")] uint firstSet, [NativeTypeName("uint32_t")] uint setCount, [NativeTypeName("const uint32_t *")] uint* pBufferIndices, [NativeTypeName("const VkDeviceSize *")] ulong* pOffsets);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindDescriptorBufferEmbeddedSamplersEXT(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipelineLayout layout, [NativeTypeName("uint32_t")] uint set);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetBufferOpaqueCaptureDescriptorDataEXT(VkDevice device, [NativeTypeName("const VkBufferCaptureDescriptorDataInfoEXT *")] VkBufferCaptureDescriptorDataInfoEXT* pInfo, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetImageOpaqueCaptureDescriptorDataEXT(VkDevice device, [NativeTypeName("const VkImageCaptureDescriptorDataInfoEXT *")] VkImageCaptureDescriptorDataInfoEXT* pInfo, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetImageViewOpaqueCaptureDescriptorDataEXT(VkDevice device, [NativeTypeName("const VkImageViewCaptureDescriptorDataInfoEXT *")] VkImageViewCaptureDescriptorDataInfoEXT* pInfo, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetSamplerOpaqueCaptureDescriptorDataEXT(VkDevice device, [NativeTypeName("const VkSamplerCaptureDescriptorDataInfoEXT *")] VkSamplerCaptureDescriptorDataInfoEXT* pInfo, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetAccelerationStructureOpaqueCaptureDescriptorDataEXT(VkDevice device, [NativeTypeName("const VkAccelerationStructureCaptureDescriptorDataInfoEXT *")] VkAccelerationStructureCaptureDescriptorDataInfoEXT* pInfo, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetDeviceFaultInfoEXT(VkDevice device, VkDeviceFaultCountsEXT* pFaultCounts, VkDeviceFaultInfoEXT* pFaultInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateMicromapEXT(VkDevice device, [NativeTypeName("const VkMicromapCreateInfoEXT *")] VkMicromapCreateInfoEXT* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkMicromapEXT* pMicromap);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyMicromapEXT(VkDevice device, VkMicromapEXT micromap, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBuildMicromapsEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkMicromapBuildInfoEXT *")] VkMicromapBuildInfoEXT* pInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBuildMicromapsEXT(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("uint32_t")] uint infoCount, [NativeTypeName("const VkMicromapBuildInfoEXT *")] VkMicromapBuildInfoEXT* pInfos);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyMicromapEXT(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyMicromapInfoEXT *")] VkCopyMicromapInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyMicromapToMemoryEXT(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyMicromapToMemoryInfoEXT *")] VkCopyMicromapToMemoryInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCopyMemoryToMicromapEXT(VkDevice device, VkDeferredOperationKHR deferredOperation, [NativeTypeName("const VkCopyMemoryToMicromapInfoEXT *")] VkCopyMemoryToMicromapInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkWriteMicromapsPropertiesEXT(VkDevice device, [NativeTypeName("uint32_t")] uint micromapCount, [NativeTypeName("const VkMicromapEXT *")] VkMicromapEXT* pMicromaps, VkQueryType queryType, [NativeTypeName("size_t")] nuint dataSize, void* pData, [NativeTypeName("size_t")] nuint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyMicromapEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyMicromapInfoEXT *")] VkCopyMicromapInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyMicromapToMemoryEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyMicromapToMemoryInfoEXT *")] VkCopyMicromapToMemoryInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyMemoryToMicromapEXT(VkCommandBuffer commandBuffer, [NativeTypeName("const VkCopyMemoryToMicromapInfoEXT *")] VkCopyMemoryToMicromapInfoEXT* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdWriteMicromapsPropertiesEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint micromapCount, [NativeTypeName("const VkMicromapEXT *")] VkMicromapEXT* pMicromaps, VkQueryType queryType, VkQueryPool queryPool, [NativeTypeName("uint32_t")] uint firstQuery);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetDeviceMicromapCompatibilityEXT(VkDevice device, [NativeTypeName("const VkMicromapVersionInfoEXT *")] VkMicromapVersionInfoEXT* pVersionInfo, VkAccelerationStructureCompatibilityKHR* pCompatibility);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetMicromapBuildSizesEXT(VkDevice device, VkAccelerationStructureBuildTypeKHR buildType, [NativeTypeName("const VkMicromapBuildInfoEXT *")] VkMicromapBuildInfoEXT* pBuildInfo, VkMicromapBuildSizesInfoEXT* pSizeInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawClusterHUAWEI(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawClusterIndirectHUAWEI(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyMemoryIndirectNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkDeviceAddress")] ulong copyBufferAddress, [NativeTypeName("uint32_t")] uint copyCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdCopyMemoryToImageIndirectNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkDeviceAddress")] ulong copyBufferAddress, [NativeTypeName("uint32_t")] uint copyCount, [NativeTypeName("uint32_t")] uint stride, VkImage dstImage, VkImageLayout dstImageLayout, [NativeTypeName("const VkImageSubresourceLayers *")] VkImageSubresourceLayers* pImageSubresources);
 
     [NativeTypeName("const VkMemoryDecompressionMethodFlagBitsNV")]
     public const ulong VK_MEMORY_DECOMPRESSION_METHOD_GDEFLATE_1_0_BIT_NV = 0x00000001UL;
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDecompressMemoryNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint decompressRegionCount, [NativeTypeName("const VkDecompressMemoryRegionNV *")] VkDecompressMemoryRegionNV* pDecompressMemoryRegions);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDecompressMemoryIndirectCountNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkDeviceAddress")] ulong indirectCommandsAddress, [NativeTypeName("VkDeviceAddress")] ulong indirectCommandsCountAddress, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetPipelineIndirectMemoryRequirementsNV(VkDevice device, [NativeTypeName("const VkComputePipelineCreateInfo *")] VkComputePipelineCreateInfo* pCreateInfo, VkMemoryRequirements2* pMemoryRequirements);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdUpdatePipelineIndirectBufferNV(VkCommandBuffer commandBuffer, VkPipelineBindPoint pipelineBindPoint, VkPipeline pipeline);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     [return: NativeTypeName("VkDeviceAddress")]
     public static extern ulong vkGetPipelineIndirectDeviceAddressNV(VkDevice device, [NativeTypeName("const VkPipelineIndirectDeviceAddressInfoNV *")] VkPipelineIndirectDeviceAddressInfoNV* pInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetTessellationDomainOriginEXT(VkCommandBuffer commandBuffer, VkTessellationDomainOrigin domainOrigin);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthClampEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthClampEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetPolygonModeEXT(VkCommandBuffer commandBuffer, VkPolygonMode polygonMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetRasterizationSamplesEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkSampleCountFlagBits")] VkSampleCountFlags rasterizationSamples);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetSampleMaskEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkSampleCountFlagBits")] VkSampleCountFlags samples, [NativeTypeName("const VkSampleMask *")] uint* pSampleMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetAlphaToCoverageEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint alphaToCoverageEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetAlphaToOneEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint alphaToOneEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetLogicOpEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint logicOpEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetColorBlendEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkBool32 *")] uint* pColorBlendEnables);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetColorBlendEquationEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkColorBlendEquationEXT *")] VkColorBlendEquationEXT* pColorBlendEquations);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetColorWriteMaskEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkColorComponentFlags *")] VkColorComponentFlags* pColorWriteMasks);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetRasterizationStreamEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint rasterizationStream);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetConservativeRasterizationModeEXT(VkCommandBuffer commandBuffer, VkConservativeRasterizationModeEXT conservativeRasterizationMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetExtraPrimitiveOverestimationSizeEXT(VkCommandBuffer commandBuffer, float extraPrimitiveOverestimationSize);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthClipEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint depthClipEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetSampleLocationsEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint sampleLocationsEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetColorBlendAdvancedEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstAttachment, [NativeTypeName("uint32_t")] uint attachmentCount, [NativeTypeName("const VkColorBlendAdvancedEXT *")] VkColorBlendAdvancedEXT* pColorBlendAdvanced);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetProvokingVertexModeEXT(VkCommandBuffer commandBuffer, VkProvokingVertexModeEXT provokingVertexMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetLineRasterizationModeEXT(VkCommandBuffer commandBuffer, VkLineRasterizationModeEXT lineRasterizationMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetLineStippleEnableEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint stippledLineEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetDepthClipNegativeOneToOneEXT(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint negativeOneToOne);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetViewportWScalingEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint viewportWScalingEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetViewportSwizzleNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint firstViewport, [NativeTypeName("uint32_t")] uint viewportCount, [NativeTypeName("const VkViewportSwizzleNV *")] VkViewportSwizzleNV* pViewportSwizzles);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageToColorEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint coverageToColorEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageToColorLocationNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint coverageToColorLocation);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageModulationModeNV(VkCommandBuffer commandBuffer, VkCoverageModulationModeNV coverageModulationMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageModulationTableEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint coverageModulationTableEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageModulationTableNV(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint coverageModulationTableCount, [NativeTypeName("const float *")] float* pCoverageModulationTable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetShadingRateImageEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint shadingRateImageEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetRepresentativeFragmentTestEnableNV(VkCommandBuffer commandBuffer, [NativeTypeName("VkBool32")] uint representativeFragmentTestEnable);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetCoverageReductionModeNV(VkCommandBuffer commandBuffer, VkCoverageReductionModeNV coverageReductionMode);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetPhysicalDeviceOpticalFlowImageFormatsNV(VkPhysicalDevice physicalDevice, [NativeTypeName("const VkOpticalFlowImageFormatInfoNV *")] VkOpticalFlowImageFormatInfoNV* pOpticalFlowImageFormatInfo, [NativeTypeName("uint32_t *")] uint* pFormatCount, VkOpticalFlowImageFormatPropertiesNV* pImageFormatProperties);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateOpticalFlowSessionNV(VkDevice device, [NativeTypeName("const VkOpticalFlowSessionCreateInfoNV *")] VkOpticalFlowSessionCreateInfoNV* pCreateInfo, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkOpticalFlowSessionNV* pSession);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyOpticalFlowSessionNV(VkDevice device, VkOpticalFlowSessionNV session, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkBindOpticalFlowSessionImageNV(VkDevice device, VkOpticalFlowSessionNV session, VkOpticalFlowSessionBindingPointNV bindingPoint, VkImageView view, VkImageLayout layout);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdOpticalFlowExecuteNV(VkCommandBuffer commandBuffer, VkOpticalFlowSessionNV session, [NativeTypeName("const VkOpticalFlowExecuteInfoNV *")] VkOpticalFlowExecuteInfoNV* pExecuteInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkCreateShadersEXT(VkDevice device, [NativeTypeName("uint32_t")] uint createInfoCount, [NativeTypeName("const VkShaderCreateInfoEXT *")] VkShaderCreateInfoEXT* pCreateInfos, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator, VkShaderEXT* pShaders);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkDestroyShaderEXT(VkDevice device, VkShaderEXT shader, [NativeTypeName("const VkAllocationCallbacks *")] VkAllocationCallbacks* pAllocator);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetShaderBinaryDataEXT(VkDevice device, VkShaderEXT shader, [NativeTypeName("size_t *")] nuint* pDataSize, void* pData);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdBindShadersEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint stageCount, [NativeTypeName("const VkShaderStageFlagBits *")] VkShaderStageFlags* pStages, [NativeTypeName("const VkShaderEXT *")] VkShaderEXT* pShaders);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkSetLatencySleepModeNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkLatencySleepModeInfoNV *")] VkLatencySleepModeInfoNV* pSleepModeInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkLatencySleepNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkLatencySleepInfoNV *")] VkLatencySleepInfoNV* pSleepInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkSetLatencyMarkerNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("const VkSetLatencyMarkerInfoNV *")] VkSetLatencyMarkerInfoNV* pLatencyMarkerInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkGetLatencyTimingsNV(VkDevice device, VkSwapchainKHR swapchain, [NativeTypeName("uint32_t *")] uint* pTimingCount, VkGetLatencyMarkerInfoNV* pLatencyMarkerInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkQueueNotifyOutOfBandNV(VkQueue queue, [NativeTypeName("const VkOutOfBandQueueTypeInfoNV *")] VkOutOfBandQueueTypeInfoNV* pQueueTypeInfo);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdSetAttachmentFeedbackLoopEnableEXT(VkCommandBuffer commandBuffer, VkImageAspectFlags aspectMask);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawMeshTasksEXT(VkCommandBuffer commandBuffer, [NativeTypeName("uint32_t")] uint groupCountX, [NativeTypeName("uint32_t")] uint groupCountY, [NativeTypeName("uint32_t")] uint groupCountZ);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawMeshTasksIndirectEXT(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, [NativeTypeName("uint32_t")] uint drawCount, [NativeTypeName("uint32_t")] uint stride);
 
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern void vkCmdDrawMeshTasksIndirectCountEXT(VkCommandBuffer commandBuffer, VkBuffer buffer, [NativeTypeName("VkDeviceSize")] ulong offset, VkBuffer countBuffer, [NativeTypeName("VkDeviceSize")] ulong countBufferOffset, [NativeTypeName("uint32_t")] uint maxDrawCount, [NativeTypeName("uint32_t")] uint stride);
 
     [NativeTypeName("#define VK_VERSION_1_0 1")]

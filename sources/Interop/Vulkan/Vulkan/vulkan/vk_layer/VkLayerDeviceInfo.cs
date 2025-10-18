@@ -10,5 +10,5 @@ public unsafe partial struct VkLayerDeviceInfo
     public void* device_info;
 
     [NativeTypeName("PFN_vkGetInstanceProcAddr")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnNextGetInstanceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnNextGetInstanceProcAddr;
 }

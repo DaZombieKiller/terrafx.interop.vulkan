@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkDeviceManualImports
 {
-    public delegate* unmanaged<VkDevice, void*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult> vkGetAndroidHardwareBufferPropertiesANDROID;
+    public delegate* unmanaged[Stdcall]<VkDevice, void*, VkAndroidHardwareBufferPropertiesANDROID*, VkResult> vkGetAndroidHardwareBufferPropertiesANDROID;
 
-    public delegate* unmanaged<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, void**, VkResult> vkGetMemoryAndroidHardwareBufferANDROID;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkMemoryGetAndroidHardwareBufferInfoANDROID*, void**, VkResult> vkGetMemoryAndroidHardwareBufferANDROID;
 }

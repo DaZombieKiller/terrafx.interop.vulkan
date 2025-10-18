@@ -7,5 +7,5 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkInstanceManualImports
 {
-    public delegate* unmanaged<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateIOSSurfaceMVK;
+    public delegate* unmanaged[Stdcall]<VkInstance, VkIOSSurfaceCreateInfoMVK*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateIOSSurfaceMVK;
 }

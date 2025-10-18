@@ -7,21 +7,21 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkDeviceManualImports
 {
-    public delegate* unmanaged<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, uint*, VkResult> vkGetMemoryZirconHandleFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkMemoryGetZirconHandleInfoFUCHSIA*, uint*, VkResult> vkGetMemoryZirconHandleFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkExternalMemoryHandleTypeFlags, uint, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult> vkGetMemoryZirconHandlePropertiesFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkExternalMemoryHandleTypeFlags, uint, VkMemoryZirconHandlePropertiesFUCHSIA*, VkResult> vkGetMemoryZirconHandlePropertiesFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult> vkImportSemaphoreZirconHandleFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkImportSemaphoreZirconHandleInfoFUCHSIA*, VkResult> vkImportSemaphoreZirconHandleFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, uint*, VkResult> vkGetSemaphoreZirconHandleFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkSemaphoreGetZirconHandleInfoFUCHSIA*, uint*, VkResult> vkGetSemaphoreZirconHandleFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkBufferCollectionCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkBufferCollectionFUCHSIA*, VkResult> vkCreateBufferCollectionFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkBufferCollectionCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkBufferCollectionFUCHSIA*, VkResult> vkCreateBufferCollectionFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkBufferCollectionFUCHSIA, VkImageConstraintsInfoFUCHSIA*, VkResult> vkSetBufferCollectionImageConstraintsFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkBufferCollectionFUCHSIA, VkImageConstraintsInfoFUCHSIA*, VkResult> vkSetBufferCollectionImageConstraintsFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkBufferCollectionFUCHSIA, VkBufferConstraintsInfoFUCHSIA*, VkResult> vkSetBufferCollectionBufferConstraintsFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkBufferCollectionFUCHSIA, VkBufferConstraintsInfoFUCHSIA*, VkResult> vkSetBufferCollectionBufferConstraintsFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkBufferCollectionFUCHSIA, VkAllocationCallbacks*, void> vkDestroyBufferCollectionFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkBufferCollectionFUCHSIA, VkAllocationCallbacks*, void> vkDestroyBufferCollectionFUCHSIA;
 
-    public delegate* unmanaged<VkDevice, VkBufferCollectionFUCHSIA, VkBufferCollectionPropertiesFUCHSIA*, VkResult> vkGetBufferCollectionPropertiesFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkDevice, VkBufferCollectionFUCHSIA, VkBufferCollectionPropertiesFUCHSIA*, VkResult> vkGetBufferCollectionPropertiesFUCHSIA;
 }

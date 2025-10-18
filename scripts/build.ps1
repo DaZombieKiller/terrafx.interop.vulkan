@@ -39,7 +39,7 @@ function Generate() {
 
   $generateRspFiles | ForEach-Object -Parallel {
     Push-Location -Path $_.DirectoryName
-    & ClangSharpPInvokeGenerator "@generate.rsp"
+    & dotnet tool run ClangSharpPInvokeGenerator -- "@generate.rsp"
     Pop-Location
   }
 }
@@ -78,6 +78,12 @@ function Pack() {
 function Restore() {
   $logFile = Join-Path -Path $LogDir -ChildPath "$configuration\restore.binlog"
   & dotnet restore -v "$verbosity" /p:Platform="Any CPU" /bl:"$logFile" /err $properties "$solution"
+
+  if ($LastExitCode -ne 0) {
+    throw "'Restore' failed for '$solution'"
+  }
+
+  & dotnet tool restore -v "$verbosity"
 
   if ($LastExitCode -ne 0) {
     throw "'Restore' failed for '$solution'"

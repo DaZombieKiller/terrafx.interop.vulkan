@@ -10,7 +10,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public static unsafe partial class Vulkan
 {
-    [DllImport("vulkan", ExactSpelling = true)]
+    [DllImport("vulkan", CallingConvention = CallingConvention.StdCall, ExactSpelling = true)]
     public static extern VkResult vkGetScreenBufferPropertiesQNX(VkDevice device, [NativeTypeName("const struct _screen_buffer *")] void* buffer, VkScreenBufferPropertiesQNX* pProperties);
 
     [NativeTypeName("#define VK_QNX_screen_surface 1")]

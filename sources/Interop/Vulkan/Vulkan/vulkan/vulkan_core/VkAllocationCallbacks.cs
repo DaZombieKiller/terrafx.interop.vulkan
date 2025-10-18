@@ -10,17 +10,17 @@ public unsafe partial struct VkAllocationCallbacks
     public void* pUserData;
 
     [NativeTypeName("PFN_vkAllocationFunction")]
-    public delegate* unmanaged<void*, nuint, nuint, VkSystemAllocationScope, void*> pfnAllocation;
+    public delegate* unmanaged[Stdcall]<void*, nuint, nuint, VkSystemAllocationScope, void*> pfnAllocation;
 
     [NativeTypeName("PFN_vkReallocationFunction")]
-    public delegate* unmanaged<void*, void*, nuint, nuint, VkSystemAllocationScope, void*> pfnReallocation;
+    public delegate* unmanaged[Stdcall]<void*, void*, nuint, nuint, VkSystemAllocationScope, void*> pfnReallocation;
 
     [NativeTypeName("PFN_vkFreeFunction")]
-    public delegate* unmanaged<void*, void*, void> pfnFree;
+    public delegate* unmanaged[Stdcall]<void*, void*, void> pfnFree;
 
     [NativeTypeName("PFN_vkInternalAllocationNotification")]
-    public delegate* unmanaged<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalAllocation;
+    public delegate* unmanaged[Stdcall]<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalAllocation;
 
     [NativeTypeName("PFN_vkInternalFreeNotification")]
-    public delegate* unmanaged<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalFree;
+    public delegate* unmanaged[Stdcall]<void*, nuint, VkInternalAllocationType, VkSystemAllocationScope, void> pfnInternalFree;
 }

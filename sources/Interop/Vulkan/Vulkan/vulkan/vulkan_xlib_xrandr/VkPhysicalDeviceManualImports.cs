@@ -7,7 +7,7 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkPhysicalDeviceManualImports
 {
-    public delegate* unmanaged<VkPhysicalDevice, void*, VkDisplayKHR, VkResult> vkAcquireXlibDisplayEXT;
+    public delegate* unmanaged[Stdcall]<VkPhysicalDevice, void*, VkDisplayKHR, VkResult> vkAcquireXlibDisplayEXT;
 
-    public delegate* unmanaged<VkPhysicalDevice, void*, nuint, VkDisplayKHR*, VkResult> vkGetRandROutputDisplayEXT;
+    public delegate* unmanaged[Stdcall]<VkPhysicalDevice, void*, nuint, VkDisplayKHR*, VkResult> vkGetRandROutputDisplayEXT;
 }

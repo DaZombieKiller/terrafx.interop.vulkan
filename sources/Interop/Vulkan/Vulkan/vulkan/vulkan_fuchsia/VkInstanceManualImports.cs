@@ -7,5 +7,5 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkInstanceManualImports
 {
-    public delegate* unmanaged<VkInstance, VkImagePipeSurfaceCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateImagePipeSurfaceFUCHSIA;
+    public delegate* unmanaged[Stdcall]<VkInstance, VkImagePipeSurfaceCreateInfoFUCHSIA*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateImagePipeSurfaceFUCHSIA;
 }

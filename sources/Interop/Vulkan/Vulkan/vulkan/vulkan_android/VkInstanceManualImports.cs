@@ -7,5 +7,5 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkInstanceManualImports
 {
-    public delegate* unmanaged<VkInstance, VkAndroidSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateAndroidSurfaceKHR;
+    public delegate* unmanaged[Stdcall]<VkInstance, VkAndroidSurfaceCreateInfoKHR*, VkAllocationCallbacks*, VkSurfaceKHR*, VkResult> vkCreateAndroidSurfaceKHR;
 }

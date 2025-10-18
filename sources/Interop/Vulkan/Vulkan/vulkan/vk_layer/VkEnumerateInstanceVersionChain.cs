@@ -10,12 +10,12 @@ public unsafe partial struct VkEnumerateInstanceVersionChain
     public VkChainHeader header;
 
     [NativeTypeName("VkResult (*)(const struct VkEnumerateInstanceVersionChain *, uint32_t *) __attribute__((stdcall))")]
-    public delegate* unmanaged<VkEnumerateInstanceVersionChain*, uint*, VkResult> pfnNextLayer;
+    public delegate* unmanaged[Stdcall]<VkEnumerateInstanceVersionChain*, uint*, VkResult> pfnNextLayer;
 
     [NativeTypeName("const struct VkEnumerateInstanceVersionChain *")]
     public VkEnumerateInstanceVersionChain* pNextLink;
 
-    public VkResult CallDown([NativeTypeName("uint32_t *")] uint* pApiVersion)
+    public readonly VkResult CallDown([NativeTypeName("uint32_t *")] uint* pApiVersion)
     {
         return pfnNextLayer(pNextLink, pApiVersion);
     }

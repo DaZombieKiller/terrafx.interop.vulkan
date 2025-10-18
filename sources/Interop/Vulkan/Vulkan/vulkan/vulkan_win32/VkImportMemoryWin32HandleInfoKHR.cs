@@ -19,5 +19,5 @@ public unsafe partial struct VkImportMemoryWin32HandleInfoKHR
     public void* handle;
 
     [NativeTypeName("LPCWSTR")]
-    public char* name;
+    public ushort* name;
 }

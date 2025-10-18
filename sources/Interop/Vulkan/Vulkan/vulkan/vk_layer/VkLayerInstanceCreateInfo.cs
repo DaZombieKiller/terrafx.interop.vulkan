@@ -27,7 +27,7 @@ public unsafe partial struct VkLayerInstanceCreateInfo
 
         [FieldOffset(0)]
         [NativeTypeName("PFN_vkSetInstanceLoaderData")]
-        public delegate* unmanaged<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
+        public delegate* unmanaged[Stdcall]<VkInstance, void*, VkResult> pfnSetInstanceLoaderData;
 
         [FieldOffset(0)]
         [NativeTypeName("__AnonymousRecord_vk_layer_L107_C9")]
@@ -39,10 +39,10 @@ public unsafe partial struct VkLayerInstanceCreateInfo
         public unsafe partial struct _layerDevice_e__Struct
         {
             [NativeTypeName("PFN_vkLayerCreateDevice")]
-            public delegate* unmanaged<VkInstance, VkPhysicalDevice, VkDeviceCreateInfo*, VkAllocationCallbacks*, VkDevice*, delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>>, delegate* unmanaged<VkDevice, sbyte*, delegate* unmanaged<void>>*, VkResult> pfnLayerCreateDevice;
+            public delegate* unmanaged[Stdcall]<VkInstance, VkPhysicalDevice, VkDeviceCreateInfo*, VkAllocationCallbacks*, VkDevice*, delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>>, delegate* unmanaged[Stdcall]<VkDevice, sbyte*, delegate* unmanaged[Stdcall]<void>>*, VkResult> pfnLayerCreateDevice;
 
             [NativeTypeName("PFN_vkLayerDestroyDevice")]
-            public delegate* unmanaged<VkDevice, VkAllocationCallbacks*, delegate* unmanaged<VkDevice, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
+            public delegate* unmanaged[Stdcall]<VkDevice, VkAllocationCallbacks*, delegate* unmanaged[Stdcall]<VkDevice, VkAllocationCallbacks*, void>, void> pfnLayerDestroyDevice;
         }
     }
 }

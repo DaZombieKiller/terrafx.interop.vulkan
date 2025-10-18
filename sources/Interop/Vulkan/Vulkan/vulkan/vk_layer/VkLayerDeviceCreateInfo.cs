@@ -27,6 +27,6 @@ public unsafe partial struct VkLayerDeviceCreateInfo
 
         [FieldOffset(0)]
         [NativeTypeName("PFN_vkSetDeviceLoaderData")]
-        public delegate* unmanaged<VkDevice, void*, VkResult> pfnSetDeviceLoaderData;
+        public delegate* unmanaged[Stdcall]<VkDevice, void*, VkResult> pfnSetDeviceLoaderData;
     }
 }

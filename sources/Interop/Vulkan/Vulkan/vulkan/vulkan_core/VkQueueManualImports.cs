@@ -7,17 +7,17 @@ namespace TerraFX.Interop.Vulkan;
 
 public unsafe partial struct VkQueueManualImports
 {
-    public delegate* unmanaged<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult> vkQueueSubmit2KHR;
+    public delegate* unmanaged[Stdcall]<VkQueue, uint, VkSubmitInfo2*, VkFence, VkResult> vkQueueSubmit2KHR;
 
-    public delegate* unmanaged<VkQueue, uint*, VkCheckpointData2NV*, void> vkGetQueueCheckpointData2NV;
+    public delegate* unmanaged[Stdcall]<VkQueue, uint*, VkCheckpointData2NV*, void> vkGetQueueCheckpointData2NV;
 
-    public delegate* unmanaged<VkQueue, VkDebugUtilsLabelEXT*, void> vkQueueBeginDebugUtilsLabelEXT;
+    public delegate* unmanaged[Stdcall]<VkQueue, VkDebugUtilsLabelEXT*, void> vkQueueBeginDebugUtilsLabelEXT;
 
-    public delegate* unmanaged<VkQueue, void> vkQueueEndDebugUtilsLabelEXT;
+    public delegate* unmanaged[Stdcall]<VkQueue, void> vkQueueEndDebugUtilsLabelEXT;
 
-    public delegate* unmanaged<VkQueue, VkDebugUtilsLabelEXT*, void> vkQueueInsertDebugUtilsLabelEXT;
+    public delegate* unmanaged[Stdcall]<VkQueue, VkDebugUtilsLabelEXT*, void> vkQueueInsertDebugUtilsLabelEXT;
 
-    public delegate* unmanaged<VkQueue, uint*, VkCheckpointDataNV*, void> vkGetQueueCheckpointDataNV;
+    public delegate* unmanaged[Stdcall]<VkQueue, uint*, VkCheckpointDataNV*, void> vkGetQueueCheckpointDataNV;
 
-    public delegate* unmanaged<VkQueue, VkPerformanceConfigurationINTEL, VkResult> vkQueueSetPerformanceConfigurationINTEL;
+    public delegate* unmanaged[Stdcall]<VkQueue, VkPerformanceConfigurationINTEL, VkResult> vkQueueSetPerformanceConfigurationINTEL;
 }

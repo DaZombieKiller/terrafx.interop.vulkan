@@ -15,5 +15,5 @@ public unsafe partial struct VkDirectDriverLoadingInfoLUNARG
     public uint flags;
 
     [NativeTypeName("PFN_vkGetInstanceProcAddrLUNARG")]
-    public delegate* unmanaged<VkInstance, sbyte*, delegate* unmanaged<void>> pfnGetInstanceProcAddr;
+    public delegate* unmanaged[Stdcall]<VkInstance, sbyte*, delegate* unmanaged[Stdcall]<void>> pfnGetInstanceProcAddr;
 }

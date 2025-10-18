@@ -1,3 +1,4 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31825.309
@@ -346,20 +347,54 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "extensions", "extensions", 
 		generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\extensions\Xrandr.h = generation\Vulkan\vulkan\vulkan_xlib_xrandr\X11\extensions\Xrandr.h
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InlineArrayGenerator", "sources\interop\InlineArrayGenerator\InlineArrayGenerator.csproj", "{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|x64.Build.0 = Debug|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Debug|x86.Build.0 = Debug|Any CPU
 		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|x64.ActiveCfg = Release|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|x64.Build.0 = Release|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|x86.ActiveCfg = Release|Any CPU
+		{C524FB60-CF37-47B5-83DF-5352900AF5D5}.Release|x86.Build.0 = Release|Any CPU
 		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|x64.Build.0 = Debug|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Debug|x86.Build.0 = Debug|Any CPU
 		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|x64.ActiveCfg = Release|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|x64.Build.0 = Release|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|x86.ActiveCfg = Release|Any CPU
+		{36F3B9F5-C894-421F-AAB2-20455380E779}.Release|x86.Build.0 = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|x64.Build.0 = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Debug|x86.Build.0 = Debug|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|x64.ActiveCfg = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|x64.Build.0 = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|x86.ActiveCfg = Release|Any CPU
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -413,6 +448,7 @@ Global
 		{8F7DEA80-8B21-47FA-B2C0-FB2CC2CB2C2F} = {14012392-945B-4E64-94FF-A043FE035F0B}
 		{DF984A37-16D8-4B98-93DC-5C0B2C4234C2} = {CE39443C-CC77-4C5C-A90C-DED73C9F7C61}
 		{9CB2A30C-0486-4C75-83C6-3C04C2B7A0B2} = {DF984A37-16D8-4B98-93DC-5C0B2C4234C2}
+		{95CA8724-AEBA-4DD3-8226-0D18EEA0899A} = {70FBCFD9-B96E-4E72-B35C-681D9B2DA3D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE36DF8-2D9C-4F20-8787-45DC74B57461}

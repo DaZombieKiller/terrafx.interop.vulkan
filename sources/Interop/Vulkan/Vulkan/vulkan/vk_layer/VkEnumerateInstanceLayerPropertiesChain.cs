@@ -10,12 +10,12 @@ public unsafe partial struct VkEnumerateInstanceLayerPropertiesChain
     public VkChainHeader header;
 
     [NativeTypeName("VkResult (*)(const struct VkEnumerateInstanceLayerPropertiesChain *, uint32_t *, VkLayerProperties *) __attribute__((stdcall))")]
-    public delegate* unmanaged<VkEnumerateInstanceLayerPropertiesChain*, uint*, VkLayerProperties*, VkResult> pfnNextLayer;
+    public delegate* unmanaged[Stdcall]<VkEnumerateInstanceLayerPropertiesChain*, uint*, VkLayerProperties*, VkResult> pfnNextLayer;
 
     [NativeTypeName("const struct VkEnumerateInstanceLayerPropertiesChain *")]
     public VkEnumerateInstanceLayerPropertiesChain* pNextLink;
 
-    public VkResult CallDown([NativeTypeName("uint32_t *")] uint* pPropertyCount, VkLayerProperties* pProperties)
+    public readonly VkResult CallDown([NativeTypeName("uint32_t *")] uint* pPropertyCount, VkLayerProperties* pProperties)
     {
         return pfnNextLayer(pNextLink, pPropertyCount, pProperties);
     }

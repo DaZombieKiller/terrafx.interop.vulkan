@@ -19,5 +19,5 @@ public unsafe partial struct VkExportFenceWin32HandleInfoKHR
     public uint dwAccess;
 
     [NativeTypeName("LPCWSTR")]
-    public char* name;
+    public ushort* name;
 }
